@@ -1,17 +1,19 @@
 NAME="f26-backgrounds"
-VERSION=26.0.0
+VERSION=26.2.1
 RELEASE=1
 CATEGORY="X11"
 SUMMARY="Fedora 26 desktop wallpaper"
 DESCRIPTION="Default wallpaper for the Fedora 26 release, along with a
 collection of selected wallpapers contributed by the Fedora community."
 HOMEPAGE="https://fedoraproject.org/wiki/Design"
-SRC_URI="https://releases.pagure.org/design/${NAME}-${VERSION}.tar.xz"
+#SRC_URI="https://releases.pagure.org/design/${NAME}-${VERSION}.tar.xz"
+sha512sum=ff3c40d75bac1976f10fbd8e364d68a21eb12e884c6a9667a5ad18d3e1892cfeebbbb0718e03d011b2c5cc8ab69ad3041077a8affabadfa6fd24402bbbac1104
+SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/f26-backgrounds/${NAME}-${VERSION}.tar.xz/sha512/${sha512sum}/${NAME}-${VERSION}.tar.xz"
 SRC_DIR=${NAME}
 
 ARCH=noarch
 
-PKG_NAMES="${NAME}" # ${NAME}-extras"
+PKG_NAMES="${NAME} ${NAME}-animated ${NAME}-extras"
 f26_backgrounds_DOCS="Attribution CC-BY-SA-4.0"
 f26_backgrounds_CONTENTS="
 	usr/share/backgrounds/f26/default/
@@ -19,6 +21,13 @@ f26_backgrounds_CONTENTS="
 	usr/share/gnome-background-properties/f26.xml
 	usr/share/mate-background-properties/f26.xml
 	usr/share/wallpapers/F26/
+"
+f26_backgrounds_animated_SUMMARY="Fedora 26 animated wallpapers"
+f26_backgrounds_animated_DOCS="Attribution CC-BY-SA-4.0"
+f26_backgrounds_animated_CONTENTS="
+	usr/share/backgrounds/f26/default-animated/
+	usr/share/gnome-background-properties/f26-animated.xml
+	usr/share/mate-background-properties/f26-animated.xml
 "
 f26_backgrounds_extras_SUMMARY="Fedora 26 extra wallpapers"
 f26_backgrounds_extras_DOCS="Attribution-Extras CC-BY-SA-4.0"
