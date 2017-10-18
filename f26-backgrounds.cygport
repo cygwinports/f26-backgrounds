@@ -1,14 +1,12 @@
 NAME="f26-backgrounds"
-VERSION=26.2.2
+VERSION=26.2.7
 RELEASE=1
 CATEGORY="X11"
 SUMMARY="Fedora 26 desktop wallpaper"
 DESCRIPTION="Default wallpaper for the Fedora 26 release, along with a
 collection of selected wallpapers contributed by the Fedora community."
 HOMEPAGE="https://fedoraproject.org/wiki/Design"
-#SRC_URI="https://releases.pagure.org/design/${NAME}-${VERSION}.tar.xz"
-sha512sum=4779d5b1033e0bf1cc441d16d660e99e0339ea97ccec663c9806ca553417e3e4d84760d0b0286119a0773575c6676d25ba8fdf0e7585d34f8fa59f39bae31e1f
-SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/f26-backgrounds/${NAME}-${VERSION}.tar.xz/sha512/${sha512sum}/${NAME}-${VERSION}.tar.xz"
+SRC_URI="https://github.com/fedoradesign/backgrounds/releases/download/v${VERSION}/${NAME}-${VERSION}.tar.xz"
 SRC_DIR=${NAME}
 
 ARCH=noarch
